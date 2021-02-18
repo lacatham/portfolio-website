@@ -1,0 +1,93 @@
+/*
+Colors used:
+Primary Colors (beige): #C7AA8D; (beige foncé): #C3976A
+Secondary Colors (rouge): #BA4A23; (maron foncé): #474542
+*/
+/*
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+*/
+body {
+  background-color: #FFFEFE;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;  /* Sets the font size to 16px */
+  font-weight: 400; /* Sets the font weight to 400 */
+  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  color: #4a4a4a;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Bodoni Moda', serif;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2.75em;
+  font-weight:700;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+/* general image responsive sizing */
+img {
+  width: 100%;
+}
+/*custome logo sizing */
+#logo {
+  width: 150px;
+  height: auto;
+}
+/* Links */
+a {
+  color: #c3976a;
+  text-decoration: none; /* No underlining */
+}
+a:hover,
+a:focus {
+  color: #ba4a23;
+  text-decoration: underline;  /* Underlining when hovering over a link */
+}
+a:visited { /* visited link */
+  color: #white;
+}
+a:active { /* selected link */
+  color: #ba4a23;
+}
+
+
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #c7aa8d;
+  color: #ffffff; /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #994c30; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+.button:hover {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+.button.contact {
+  background-color: #ffffff;
+  color: #c7aa8d;
+  text-transform: uppercase;
+  border: 2px solid #c3976a;
+}
+.button.contact:hover {
+  background-color: #c3976a;
+  color: #ffffff;
+}

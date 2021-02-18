@@ -3,9 +3,18 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="<Myriam Pauillac">
   <meta name="description" content="Personal portfolio of UI and UX design work">
   <title>Mel Diamand</title>
+  <!-- add noramlize below -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <!-- add your style.css file below that's in the css directory -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- font family -->
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -13,7 +22,7 @@
   <header>
     <!-- For the navigation -->
     <div class="container">
-      <a href="index.html"><img src="img/logo/Logo.svg" alt="Logo mel diamand"></a>
+      <a href="index.html"><img id="logo" src="img/logo/Logo.svg" alt="Logo mel diamand"></a>
       <nav>
         <ul>
           <li><a href="index.html">Work</a></li>
@@ -26,7 +35,7 @@
 
   <main>
     <!-- For the hero section -->
-    <div class="section">
+    <div id="hero">
       <div class="container">
         <h1>Hello, I'm Myriam aka Mel Diamand <span>Free spirit, product designer & team director</span></h1>
         <p>
@@ -36,7 +45,7 @@
     </div>
 
     <!-- For your projects -->
-    <div class="section">
+    <div id="projects">
       <div class="container">
         <!-- open first column (used for image) -->
         <h2>Projects</h2>
@@ -61,7 +70,7 @@
             <p>
               UI Design
             </p>
-            <a href="done.html">View Project</a>
+            <a href="done.html" class="button">View Project</a>
           </div>
         </div>
         <!-- open first column (used for image) -->
@@ -88,7 +97,7 @@
             <p>
               Mobile & Responsive Web
             </p>
-            <a href="">View Project</a>
+            <a href="#" class="button">View Project</a>
           </div>
         </div>
       </div>
@@ -103,7 +112,7 @@
         You have a project you want to talk about? Let's connect! Call: <a href="tel:+33490956265">+33 490956265</a>. Prefer sending an email?
       </p>
       <div>
-        <a href="mailto:myriam@pauillac.eu">Email me</a>
+        <a href="mailto:myriam@pauillac.eu" class="button contact">Email me</a>
       </div>
 
       <!--Social Media Layout and placeholders-->
