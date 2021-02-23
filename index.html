@@ -24,7 +24,7 @@
     <div class="container">
       <a href="index.html"><img id="logo" src="img/logo/Logo.svg" alt="Logo mel diamand"></a>
       <nav>
-        <ul>
+        <ul class="navigation">
           <li><a href="index.html">Work</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -35,73 +35,73 @@
 
   <main>
     <!-- For the hero section -->
-    <div id="hero">
-      <div class="container">
-        <h1>Hello, I'm Myriam aka Mel Diamand <span>Free spirit, product designer & team director</span></h1>
-        <p>
-          A trained historian and archivist, I work on product design for Anaphore, a software company based in Provence, France
-        </p>
-      </div>
+    <div class="section" id="hero">
+        <div class="container">
+          <h1>Hello, I'm Myriam aka mel diamand <span>Free spirit, product designer & team director</span></h1>
+          <p>
+            A trained historian and archivist, I work on product design for Anaphore, a software company based in Provence, France
+          </p>
+        </div>
     </div>
 
     <!-- For your projects -->
-    <div id="projects">
-      <div class="container">
-        <!-- open first column (used for image) -->
-        <h2>Projects</h2>
-        <div class="row">
-          <div class="column">
-            <picture>
-              <source srcset="img/done/projet1_done@1x.jpg" media="(max-width:767px)">
-              <!--   <source srcset="http://via.placeholder.com/600x400" media="(max-width:767px)">-->
-              <source srcset="img/done/projet1_done@2x.jpg" media="(max-width:1023px)">
-              <img src="img/done/projet1_done@3x.jpg" alt="Done! project">
-            </picture>
-          </div><!-- end first column-->
-          <div class="column">
-            <!-- open second column (used for text) -->
-            <h3>Done!</h3><!-- heading to the project-->
-            <p>
-              A productivity app to manage daily tasks on the go
-            </p>
-            <p>
-              Scope:
-            </p>
-            <p>
-              UI Design
-            </p>
-            <a href="done.html" class="button">View Project</a>
+    <div class="section" id="project">
+        <div class="container">
+          <!-- open first column (used for image) -->
+          <h2>Projects</h2>
+          <div class="row">
+            <div class="column">
+              <picture>
+                <source srcset="img/done/projet1_done@1x.jpg" media="(max-width:767px)">
+                <!--   <source srcset="http://via.placeholder.com/600x400" media="(max-width:767px)">-->
+                <source srcset="img/done/projet1_done@2x.jpg" media="(max-width:1023px)">
+                <img src="img/done/projet1_done@3x.jpg" alt="Done! project">
+              </picture>
+            </div><!-- end first column-->
+            <div class="column">
+              <!-- open second column (used for text) -->
+              <h3>Done!</h3><!-- heading to the project-->
+              <p>
+                A productivity app to manage daily tasks on the go
+              </p>
+              <p>
+                Scope:
+              </p>
+              <p>
+                UI Design
+              </p>
+              <a href="done.html" class="button">View Project</a>
+            </div>
           </div>
-        </div>
-        <!-- open first column (used for image) -->
-        <div class="row">
-          <div class="column">
-            <picture>
-              <source srcset="img/traces/projet2_traces@1x.jpg" media="(max-width:767px)">
-              <source srcset="img/traces/projet2_traces@2x.jpg" media="(max-width:1023px)">
-              <img src="img/traces/projet2_traces@3x.jpg" alt="Traces & Places! project">
-            </picture>
-          </div><!-- end first column-->
-          <div class="column">
-            <!-- open second column (used for text) -->
-            <h3>Traces & Places</h3><!-- heading to the project-->
-            <p>
-              Traces & Places is a location-based responsive Web app aimed at family historians and cultural heritage specialists.
-            </p>
-            <p>
-              Scope:
-            </p>
-            <p>
-              UX & UI Design
-            </p>
-            <p>
-              Mobile & Responsive Web
-            </p>
-            <a href="#" class="button">View Project</a>
+          <!-- open first column (used for image) -->
+          <div class="row">
+            <div class="column">
+              <picture>
+                <source srcset="img/traces/projet2_traces@1x.jpg" media="(max-width:767px)">
+                <source srcset="img/traces/projet2_traces@2x.jpg" media="(max-width:1023px)">
+                <img src="img/traces/projet2_traces@3x.jpg" alt="Traces & Places! project">
+              </picture>
+            </div><!-- end first column-->
+            <div class="column">
+              <!-- open second column (used for text) -->
+              <h3>Traces & Places</h3><!-- heading to the project-->
+              <p>
+                Traces & Places is a location-based responsive Web app aimed at family historians and cultural heritage specialists.
+              </p>
+              <p>
+                Scope:
+              </p>
+              <p>
+                UX & UI Design
+              </p>
+              <p>
+                Mobile & Responsive Web
+              </p>
+              <a href="traces.html" class="button">View Project</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </main>
 
   <!-- For the footer -->
@@ -111,14 +111,14 @@
       <p>
         You have a project you want to talk about? Let's connect! Call: <a href="tel:+33490956265">+33 490956265</a>. Prefer sending an email?
       </p>
-      <div>
+      <div class="email">
         <a href="mailto:myriam@pauillac.eu" class="button contact">Email me</a>
       </div>
 
       <!--Social Media Layout and placeholders-->
       <div>
         <a href="https://www.linkedin.com/in/myriam-pauillac/" target="_blank">
-          <?xml version="1.0" ?><svg height="512" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#"
+          <?xml version="1.0" ?> <svg height="512" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#"
             xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
             xmlns:svg="http://www.w3.org/2000/svg">
             <defs id="defs12" />
