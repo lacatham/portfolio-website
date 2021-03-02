@@ -9,7 +9,7 @@ Secondary Colors (rouge): #BA4A23; (maron foncé): #474542
 header {
   background-color: #c7aa8d;
   text-align: center;
-    padding: 10px 0;
+  padding: 10px 0;
   /* Adds a 10px inner spacing to all sides */
   box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.65);
   position: fixed;
@@ -43,8 +43,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.25em;
-  font-weight: 700;
+  font-size: 1.75em;
+  font-weight: 600;
 }
 
 h3 {
@@ -74,18 +74,30 @@ a {
   /* No underlining */
 }
 
+
+a:hover, a:focus {
+  color: #983b1b;
+  text-decoration: underline;
+  /* Underlining when hovering over a link */
+}
+nav>ul>li>a {
+  transition-duration: 0.5s;
+  transition-property: background-color color border-radius box-shadow;
+}
+
 nav>ul>li>a:visited {
   /* visited link */
   color: #white;
 }
 
-a:hover,
-a:focus {
-  color: #983b1b;
-  text-decoration: underline;
-  /* Underlining when hovering over a link */
-}
 
+nav>ul>li>a:hover {
+background-color: #C7AA8D;
+   color: white;
+   border-radius: 30px;
+   box-shadow: 0px -1px 24px 7px rgb(255 255 255);
+     text-decoration: none;
+  }
 a:active {
   /* selected link */
   color: #ba4a23;
@@ -103,6 +115,7 @@ a:active {
   border-bottom: 2px solid #994c30;
   /* width of the border, type, color */
   transition: 0.2s opacity;
+  transition-property: opacity;
 }
 
 .button:hover {
@@ -138,6 +151,12 @@ footer svg {
   /* 25px top and bottom, 0 left and right */
 }
 
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 #project .row {
   padding-bottom: 25px;
   border-bottom: 1px solid #4a4a4a;
@@ -147,10 +166,11 @@ footer svg {
   text-align: center;
   /* Centers text */
 }
+
 #hero span {
   font-size: 70%;
   line-height: 1.4;
-  display:block;
+  display: block;
   margin-top: 1em;
 }
 
@@ -161,6 +181,11 @@ footer svg {
 #about h1 {
   text-align: center;
   /* Centers text */
+}
+
+#about-page h3 {
+  margin-top: 0;
+    /* Sets margins to none */
 }
 
 nav>ul {
@@ -179,15 +204,158 @@ nav>ul>li>a {
   font-weight: 600;
   color: #4a4a4a;
 }
+
 #hero {
   background-color: #474542;
   padding: 20px 0;
- text-align: center;
- color: white;
+  text-align: center;
+  color: white;
 }
+
 main {
   padding-top: 118px;
 }
+
 .email {
   margin-bottom: 1em;
+}
+
+.berlin-illustration {
+  width 100%, max-width 100%, height: auto
+}
+
+@keyframes color-change {
+  from {fill: #edc655;}
+  to {fill: #f76414;}
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+  main {
+    padding-top: 79px;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+
+  .col-lg-8 {
+    width: 60%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+  body {
+    font-size: 18px;
+  }
+
+  [class*="col-"] {
+    float: left;
+  }
+  .col-xl-4 {
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+
+/* ==============================
+Extra-large devices (1920px or larger)
+================================= */
+@media only screen and (min-width: 1920px) {
+  body {
+    font-size: 18px;
+  }
+
+  .col-el-4 {
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
