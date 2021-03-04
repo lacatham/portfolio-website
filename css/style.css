@@ -57,6 +57,12 @@ h4 {
   font-weight: 400;
 }
 
+.project-page h1, .project-page h2, .project-page h3, .project-page p, .project-page ul {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* general image responsive sizing */
 img {
   width: 100%;
@@ -74,34 +80,41 @@ a {
   /* No underlining */
 }
 
-
 a:hover, a:focus {
   color: #983b1b;
   text-decoration: underline;
   /* Underlining when hovering over a link */
 }
-nav>ul>li>a {
-  transition-duration: 0.5s;
-  transition-property: background-color color border-radius box-shadow;
-}
-
-nav>ul>li>a:visited {
-  /* visited link */
-  color: #white;
-}
-
-
-nav>ul>li>a:hover {
-background-color: #C7AA8D;
-   color: white;
-   border-radius: 30px;
-   box-shadow: 0px -1px 24px 7px rgb(255 255 255);
-     text-decoration: none;
-  }
 a:active {
   /* selected link */
   color: #ba4a23;
 }
+nav>ul>li>a {
+  transition-duration: 0.9s;
+  transition-property: background-color color border-radius box-shadow;
+}
+
+
+
+nav>ul>li>a:active {
+  /* visited link */
+  color: #474542;
+}
+nav>ul>li>a:visited {
+  /* visited link */
+  /*color: white;*/
+}
+  nav>ul>li>a:hover, nav>ul>li>a:focus {
+  background-color: #C7AA8D;
+  color: white;
+  border-radius: 30px;
+  box-shadow: 0px 0px 2px 2px rgb(255 255 255);
+  -webkit-box-shadow: 0px 0px 2px 2px rgb(255 255 255);
+  -moz-box-shadow: 0px 0px 2px 2px rgb(255 255 255);
+  text-decoration: none;
+}
+
+
 
 .button {
   display: inline-block;
@@ -125,15 +138,23 @@ a:active {
 }
 
 .button.contact {
-  background-color: #ffffff;
-  color: #c7aa8d;
+  background-color: #c7aa8d;
+  color: #ffffff;
   text-transform: uppercase;
-  border: 2px solid #c3976a;
+  border: 2px solid #c7aa8d;
 }
 
 .button.contact:hover {
   background-color: #c3976a;
   color: #ffffff;
+}
+
+footer {
+  background-color: #474542;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0 20px;
+  padding-bottom: 0;
 }
 
 footer svg {
@@ -157,7 +178,7 @@ footer svg {
   display: table;
 }
 
-#project .row {
+#project .row:not(:last-child) {
   padding-bottom: 25px;
   border-bottom: 1px solid #4a4a4a;
 }
@@ -185,7 +206,7 @@ footer svg {
 
 #about-page h3 {
   margin-top: 0;
-    /* Sets margins to none */
+  /* Sets margins to none */
 }
 
 nav>ul {
@@ -220,39 +241,6 @@ main {
   margin-bottom: 1em;
 }
 
-.berlin-illustration {
-  width 100%, max-width 100%, height: auto
-}
-
-@keyframes color-change {
-  from {fill: #edc655;}
-  to {fill: #f76414;}
-}
-
-.sun {
-  animation: 4s color-change infinite alternate linear;
-}
-
-@keyframes cloud-move {
-  from {transform: translate(0,50px);}
-  to {transform: translate(200px,50px);}
-}
-
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
-}
-
-@keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
-}
-
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
-}
-
-
-
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -280,7 +268,6 @@ Medium devices (640px and larger)
     padding-left: 10px;
     padding-right: 10px;
   }
-
 }
 
 /* ==============================
@@ -291,21 +278,25 @@ Large devices (1024px or larger)
     font-size: 18px;
   }
 
-  .col-lg-8 {
-    width: 60%;
-  }
-
-  [class*="col-"] {
-    float: left;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+.col-lg-1 {width: 8.33%;}
+.col-lg-2 {width: 16.66%;}
+.col-lg-3 {width: 25%;}
+.col-lg-4 {width: 33.33%;}
+.col-lg-5 {width: 41.66%;}
+.col-lg-6 {width: 50%;}
+.col-lg-7 {width: 58.33%;}
+.col-lg-8 {width: 66.66%;}
+.col-lg-9 {width: 75%;}
+.col-lg-10 {width: 83.33%;}
+.col-lg-11 {width: 91.66%;}
+.col-lg-12 {width: 100%;}
 
   .container {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
+
 }
 
 /* ==============================
@@ -319,21 +310,11 @@ X-large devices (1440px or larger)
   [class*="col-"] {
     float: left;
   }
-  .col-xl-4 {
+
+  .col-xl-6 {
     width: 50%;
   }
 
-  [class*="col-"] {
-    float: left;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
 }
 
 /* ==============================
@@ -344,18 +325,7 @@ Extra-large devices (1920px or larger)
     font-size: 18px;
   }
 
-  .col-el-4 {
+  .col-el-6 {
     width: 50%;
   }
-
-  [class*="col-"] {
-    float: left;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
 }
