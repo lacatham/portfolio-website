@@ -8,8 +8,7 @@ Secondary Colors (rouge): #BA4A23; (maron foncé): #474542
 */
 header {
   background-color: #c7aa8d;
-  text-align: center;
-  padding: 10px 0;
+  padding: 10px 0 4px;
   /* Adds a 10px inner spacing to all sides */
   box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.65);
   position: fixed;
@@ -69,7 +68,7 @@ img {
 }
 
 /*custome logo sizing */
-#logo {
+.logo {
   width: 150px;
 }
 
@@ -94,8 +93,6 @@ nav>ul>li>a {
   transition-property: background-color color border-radius box-shadow;
 }
 
-
-
 nav>ul>li>a:active {
   /* visited link */
   color: #474542;
@@ -104,17 +101,12 @@ nav>ul>li>a:visited {
   /* visited link */
   /*color: white;*/
 }
-  nav>ul>li>a:hover, nav>ul>li>a:focus {
-  background-color: #C7AA8D;
-  color: white;
-  border-radius: 30px;
-  box-shadow: 0px 0px 2px 2px rgb(255 255 255);
-  -webkit-box-shadow: 0px 0px 2px 2px rgb(255 255 255);
-  -moz-box-shadow: 0px 0px 2px 2px rgb(255 255 255);
-  text-decoration: none;
+
+nav>ul>li>a:hover, nav>ul>li>a:focus {
+background-color: #C7AA8D;
+color: white;
+text-decoration: none;
 }
-
-
 
 .button {
   display: inline-block;
@@ -212,11 +204,36 @@ footer svg {
 nav>ul {
   list-style-type: none;
   padding: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
-nav>ul>li {
-  display: inline-block;
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  padding-right: 0;
+  right: 0;
+  top: 10px;
+  font-size: 20px;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(71,69,66,0.5);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
 }
 
 nav>ul>li>a {
@@ -234,7 +251,7 @@ nav>ul>li>a {
 }
 
 main {
-  padding-top: 118px;
+  padding-top: 56px;
 }
 
 .email {
@@ -258,6 +275,28 @@ Medium devices (640px and larger)
   main {
     padding-top: 79px;
   }
+
+  nav>ul>li {
+    display: inline-block;
+  }
+
+nav> ul {
+  margin: 1em 0;
+
+}
+nav>ul>li>a:hover, nav>ul>li>a:focus {
+border-radius: 30px;
+box-shadow: 0px 0px 2px 2px rgb(255 255 255);
+-webkit-box-shadow: 0px 0px 2px 2px rgb(255 255 255);
+-moz-box-shadow: 0px 0px 2px 2px rgb(255 255 255);
+}
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+  display: none;
+}
 
   .col-md-6 {
     width: 50%;

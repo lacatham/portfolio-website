@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="<Myriam Pauillac">
   <meta name="description" content="Personal portfolio of UI and UX design work">
-  <title>Mel Diamand</title>
-  <!-- add noramlize below -->
+  <title>mel diamand</title>
+  <!-- Font Awesome kit's code -->
+  <script src="https://kit.fontawesome.com/abc9281ce1.js" crossorigin="anonymous"></script>
+  <!-- add normalize below -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <!-- add your style.css file below that's in the css directory -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -22,88 +24,91 @@
   <header>
     <!-- For the navigation -->
     <div class="container">
-      <a href="index.html"><img id="logo" src="img/logo/Logo.svg" alt="Logo mel diamand"></a>
-      <nav>
-        <ul class="navigation">
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="navtoggle" id="myNavtoggle">
+        <a href="index.html"><img class="logo" src="img/logo/Logo.svg" alt="Logo mel diamand"></a>
+        <nav>
+          <ul class="navigation">
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main>
     <!-- For the hero section -->
     <div class="section" id="hero">
-        <div class="container">
-          <h1>Hello, I'm Myriam aka mel diamand <span>Free spirit, product designer & team director</span></h1>
-          <p>
-            A trained historian and archivist, I work on product design for Anaphore, a software company based in Provence, France
-          </p>
-        </div>
+      <div class="container">
+        <h1>Hello, I'm Myriam aka mel diamand <span>Free spirit, product designer & team director</span></h1>
+        <p>
+          A trained historian and archivist, I work on product design for Anaphore, a software company based in Provence, France
+        </p>
+      </div>
     </div>
 
     <!-- For your projects -->
     <div class="section" id="project">
-        <div class="container">
-          <!-- open first column (used for image) -->
-          <h2>Projects</h2>
+      <div class="container">
+        <!-- open first column (used for image) -->
+        <h2>Projects</h2>
 
-          <div class="row">
-            <div class="column col-md-6 col-lg-7">
-              <picture>
-                <source srcset="img/done/projet1_done@1x.jpg" media="(max-width:767px)">
-                <!--   <source srcset="http://via.placeholder.com/600x400" media="(max-width:767px)">-->
-                <source srcset="img/done/projet1_done@2x.jpg" media="(max-width:1023px)">
-                <img src="img/done/projet1_done@3x.jpg" alt="Done! project">
-              </picture>
-            </div><!-- end first column-->
-            <div class="column col-md-6 col-lg-5">
-              <!-- open second column (used for text) -->
-              <h3>Done!</h3><!-- heading to the project-->
-              <p>
-                A productivity app to manage daily tasks on the go
-              </p>
-              <p>
-                Scope:
-              </p>
-              <p>
-                UI Design
-              </p>
-              <a href="done.html" class="button">View Project</a>
-            </div>
+        <div class="row">
+          <div class="column col-md-6 col-lg-7">
+            <picture>
+              <source srcset="img/done/projet1_done@1x.jpg" media="(max-width:767px)">
+              <!--   <source srcset="http://via.placeholder.com/600x400" media="(max-width:767px)">-->
+              <source srcset="img/done/projet1_done@2x.jpg" media="(max-width:1023px)">
+              <img src="img/done/projet1_done@3x.jpg" alt="Done! project">
+            </picture>
+          </div><!-- end first column-->
+          <div class="column col-md-6 col-lg-5">
+            <!-- open second column (used for text) -->
+            <h3>Done!</h3><!-- heading to the project-->
+            <p>
+              A productivity app to manage daily tasks on the go
+            </p>
+            <p>
+              Scope:
+            </p>
+            <p>
+              UI Design
+            </p>
+            <a href="done.html" class="button">View Project</a>
           </div>
-          <!-- open first column (used for image) -->
-          <div class="row">
-            <div class="column col-md-6 col-lg-7">
-              <picture>
-                <source srcset="img/traces/projet2_traces@1x.jpg" media="(max-width:767px)">
-                <source srcset="img/traces/projet2_traces@2x.jpg" media="(max-width:1023px)">
-                <img src="img/traces/projet2_traces@3x.jpg" alt="Traces & Places! project">
-              </picture>
+        </div>
+        <!-- open first column (used for image) -->
+        <div class="row">
+          <div class="column col-md-6 col-lg-7">
+            <picture>
+              <source srcset="img/traces/projet2_traces@1x.jpg" media="(max-width:767px)">
+              <source srcset="img/traces/projet2_traces@2x.jpg" media="(max-width:1023px)">
+              <img src="img/traces/projet2_traces@3x.jpg" alt="Traces & Places! project">
+            </picture>
 
-            </div><!-- end first column-->
-            <div class="column col-md-6 col-lg-5">
-              <!-- open second column (used for text) -->
-              <h3>Traces & Places</h3><!-- heading to the project-->
-              <p>
-                Traces & Places is a location-based responsive Web app aimed at family historians and cultural heritage specialists.
-              </p>
-              <p>
-                Scope:
-              </p>
-              <p>
-                UX & UI Design
-              </p>
-              <p>
-                Mobile & Responsive Web
-              </p>
-              <a href="traces.html" class="button">View Project</a>
-            </div>
+          </div><!-- end first column-->
+          <div class="column col-md-6 col-lg-5">
+            <!-- open second column (used for text) -->
+            <h3>Traces & Places</h3><!-- heading to the project-->
+            <p>
+              Traces & Places is a location-based responsive Web app aimed at family historians and cultural heritage specialists.
+            </p>
+            <p>
+              Scope:
+            </p>
+            <p>
+              UX & UI Design
+            </p>
+            <p>
+              Mobile & Responsive Web
+            </p>
+            <a href="traces.html" class="button">View Project</a>
           </div>
         </div>
       </div>
+    </div>
   </main>
 
   <!-- For the footer -->
@@ -143,6 +148,8 @@
         © mel diamand 2021
       </p>
   </footer>
-<script src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
