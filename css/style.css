@@ -1,7 +1,7 @@
 /*
 Colors used:
-Primary Colors (beige): #C7AA8D; (beige foncé): #C3976A
-Secondary Colors (rouge): #BA4A23; (maron foncé): #474542
+Primary Colors (beige): #C7AA8D; (beige foncé): #C3976A ; texte bouton : #956F49
+Secondary Colors (rouge): #722e16; (maron foncé): #474542
 */
 /*
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap');
@@ -72,6 +72,20 @@ img {
   width: 150px;
 }
 
+.button {
+  display: inline-block;
+  /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #c7aa8d;
+  color: #434343;
+  /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #722e16;
+  /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+
 /* Links */
 a {
   color: #474542;
@@ -84,43 +98,32 @@ a:hover, a:focus {
   text-decoration: underline;
   /* Underlining when hovering over a link */
 }
+
 a:active {
   /* selected link */
-  color: #ba4a23;
+  color: #722e16;
 }
+
 nav>ul>li>a {
   transition-duration: 0.9s;
-  transition-property: background-color color border-radius box-shadow;
+  transition-property: background-color, color, border-radius, box-shadow;
 }
 
 nav>ul>li>a:active {
   /* visited link */
+  background-color: #c7aa8d;
   color: #474542;
 }
+
 nav>ul>li>a:visited {
   /* visited link */
   /*color: white;*/
 }
 
 nav>ul>li>a:hover, nav>ul>li>a:focus {
-background-color: #C7AA8D;
-color: white;
-text-decoration: none;
-}
-
-.button {
-  display: inline-block;
-  /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #c7aa8d;
-  color: #ffffff;
-  /* needed to override the default link color */
-  font-weight: 400;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid #994c30;
-  /* width of the border, type, color */
-  transition: 0.2s opacity;
-  transition-property: opacity;
+  background-color: #C7AA8D;
+  color: white;
+  text-decoration: none;
 }
 
 .button:hover {
@@ -133,7 +136,7 @@ text-decoration: none;
   background-color: #c7aa8d;
   color: #ffffff;
   text-transform: uppercase;
-  border: 2px solid #c7aa8d;
+  border: 2px solid #956F49;
 }
 
 .button.contact:hover {
@@ -146,7 +149,7 @@ footer {
   color: #ffffff;
   text-align: center;
   padding: 20px 0 20px;
-  padding-bottom: 0;
+  /*padding-bottom: 0;*/
 }
 
 footer svg {
@@ -204,7 +207,7 @@ footer svg {
 nav>ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 1em 0;
 }
 
 .navtoggle, .navtoggle.responsive {
@@ -226,13 +229,14 @@ nav>ul {
 .navtoggle.responsive nav {
   padding: 24px 0 0;
 }
-.navtoggle.responsive li  {
+
+.navtoggle.responsive li {
   display: block;
   padding: 10px 0;
-  border-top: 1px solid rgba(71,69,66,0.5);
+  border-top: 1px solid rgba(71, 69, 66, 0.5);
 }
 
-.navtoggle.responsive li:last-child  {
+.navtoggle.responsive li:last-child {
   padding: 0 0 10px;
 }
 
@@ -275,28 +279,22 @@ Medium devices (640px and larger)
   main {
     padding-top: 79px;
   }
-
   nav>ul>li {
     display: inline-block;
   }
 
-nav> ul {
-  margin: 1em 0;
+  nav>ul>li>a:hover, nav>ul>li>a:focus {
+    border-radius: 30px;
+    box-shadow: 0px 0px 2px 2px rgb(255 255 255);
+  }
 
-}
-nav>ul>li>a:hover, nav>ul>li>a:focus {
-border-radius: 30px;
-box-shadow: 0px 0px 2px 2px rgb(255 255 255);
--webkit-box-shadow: 0px 0px 2px 2px rgb(255 255 255);
--moz-box-shadow: 0px 0px 2px 2px rgb(255 255 255);
-}
   .navtoggle li:not(:last-child) {
     display: inline-block;
   }
 
   .navtoggle li:last-child {
-  display: none;
-}
+    display: none;
+  }
 
   .col-md-6 {
     width: 50%;
@@ -313,57 +311,78 @@ box-shadow: 0px 0px 2px 2px rgb(255 255 255);
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
-  body {
-    font-size: 18px;
+  .col-lg-1 {
+    width: 8.33%;
   }
 
-.col-lg-1 {width: 8.33%;}
-.col-lg-2 {width: 16.66%;}
-.col-lg-3 {width: 25%;}
-.col-lg-4 {width: 33.33%;}
-.col-lg-5 {width: 41.66%;}
-.col-lg-6 {width: 50%;}
-.col-lg-7 {width: 58.33%;}
-.col-lg-8 {width: 66.66%;}
-.col-lg-9 {width: 75%;}
-.col-lg-10 {width: 83.33%;}
-.col-lg-11 {width: 91.66%;}
-.col-lg-12 {width: 100%;}
+  .col-lg-2 {
+    width: 16.66%;
+  }
+
+  .col-lg-3 {
+    width: 25%;
+  }
+
+  .col-lg-4 {
+    width: 33.33%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  .col-lg-8 {
+    width: 66.66%;
+  }
+
+  .col-lg-9 {
+    width: 75%;
+  }
+
+  .col-lg-10 {
+    width: 83.33%;
+  }
+
+  .col-lg-11 {
+    width: 91.66%;
+  }
+
+  .col-lg-12 {
+    width: 100%;
+  }
 
   .container {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
-
 }
 
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
-  body {
-    font-size: 18px;
-  }
 
-  [class*="col-"] {
+  /*[class*="col-"] {
     float: left;
-  }
-
+  }*/
   .col-xl-6 {
     width: 50%;
   }
-
 }
 
 /* ==============================
 Extra-large devices (1920px or larger)
 ================================= */
 @media only screen and (min-width: 1920px) {
-  body {
-    font-size: 18px;
-  }
-
   .col-el-6 {
     width: 50%;
   }
